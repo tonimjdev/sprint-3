@@ -1,3 +1,4 @@
+// Script de l'Sprint 3 de l'itinerar Angular - Alumne: Toni Machado
 "use strict";
 // If you have time, you can move this variable "products" to a json or js file and load the data in this js. It will look more professional
 var products = [
@@ -81,12 +82,14 @@ function buy(id) {
     for (let i=0; i<products.length; i++) {
         console.log('pos array=',i);
         if (products[i].id==id) {cartList.push(products[i]); 
-            console.log('cartList', cartList); return};
-    }
+            console.log('cartList', cartList);
+        i=products.length};
+    }   
 }
 
 // Exercise 2
 function cleanCart() {
+    cart= [];
     cartList = [];
     console.log('Cart:', cartList);
 }
@@ -94,7 +97,7 @@ function cleanCart() {
 // Exercise 3
 function calculateTotal() {
     // Calculate total price of the cart using the "cartList" array
-
+    total=0;
     for (let i=0; i<cartList.length; i++) {
         total += cartList[i].price;
         console.log('Total=', total.toFixed(2));
@@ -106,13 +109,29 @@ function calculateTotal() {
 function generateCart() {
     // Using the "cartlist" array that contains all the items in the shopping cart, 
     // generate the "cart" array that does not contain repeated items, instead each item of this array "cart" shows the quantity of product.
-
-    
+   cart = [];
+    for (let i=0; i<cartList.length; i++) {
+        if (!cart.includes(cartList[i])) {
+            cartList[i].quantity = 1;
+            cart.push(cartList[i])
+        } else {
+            cartList[i].quantity += 1;
+        }
+    } console.log ('Cart: ', cart);
 }
 
 // Exercise 5
 function applyPromotionsCart() {
     // Apply promotions to each item in the array "cart"
+    for (let i=0; i<cart.length; i++) {
+        cart[i].subtotal = (cart[i].price) * (cart[i].quantity); // Subtotal
+        // Promotion Oil Cooking
+        if (cart[i].id==1 && cart[i].quantity>=3) {
+            // A partir de 3 unidades la ud cuesta 10.00$ (descuento del 4,76%)
+            cart[i].subtotalWithDiscount = cart[i].subtotal-(cart[i].subtotal*0.0476);
+        } console.log ('Subtotal discount ', cart[i].subtotalWithDiscount.toFixed(2));
+        console.log ('Subtotal: ',cart[i].subtotal.toFixed(2));
+    }
 }
 
 // Exercise 6
