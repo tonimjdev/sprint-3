@@ -78,15 +78,14 @@ var total = 0;
 function buy(id) {
   // 1. Loop for to the array products to get the item to add to cart
   // 2. Add found product to the cartList array
-  
+  addToCart(id);
+  /*
   for (let i = 0; i < products.length; i++) {
-    console.log("pos array=", i);
     if (products[i].id == id) {
       cartList.push(products[i]);
-      console.log("cartList", cartList);
       i = products.length;
     }
-  }
+  }*/
 }
 
 // Exercise 2
@@ -111,7 +110,7 @@ function calculateTotal() {
 function generateCart() {
   // Using the "cartlist" array that contains all the items in the shopping cart,
   // generate the "cart" array that does not contain repeated items, instead each item of this array "cart" shows the quantity of product.
-  cart = [];
+  /*cart = [];
   for (let i = 0; i < cartList.length; i++) {
     if (!cart.includes(cartList[i])) {
       cartList[i].quantity = 1;
@@ -120,7 +119,7 @@ function generateCart() {
       cartList[i].quantity += 1;
     }
   }
-  console.log("Cart: ", cart);
+  console.log("Cart: ", cart);*/
 }
 
 // Exercise 5
@@ -153,8 +152,6 @@ function applyPromotionsCart() {
 // Exercise 6
 function printCart() {
   // Fill the shopping cart modal manipulating the shopping cart dom
-  generateCart();
-  applyPromotionsCart();
   let cartModal = document.querySelector("#cart_list");
   cartModal.innerHTML = "";
   for (let i = 0; i < cart.length; i++) { // Recorremos el array cart i mostramos los productos en el carrito
@@ -176,13 +173,36 @@ function printCart() {
 // Exercise 7
 function addToCart(id) {
   // Refactor previous code in order to simplify it
+  // Definimos variable product i enlazamos contador
+  let product;
+  let contador = document.getElementById('count_product');
   // 1. Loop for to the array products to get the item to add to cart
+  for (let i=0; i<id; i++) {
+    product = products[i];
+  }
+  cartList.push(product);
+  console.log ('Add to cart - cartList Array: ', cartList);
+
   // 2. Add found product to the cart array or update its quantity in case it has been added previously.
+let indexProduct = cartList.findIndex(p => p === product);
+console.log('index product: ',indexProduct);
+if (!cart.includes(product)) {
+  cartList[indexProduct].quantity=1;3
+  cart.push(cartList[indexProduct]);
+  contador.innerHTML++;
+} else {
+  cartList[indexProduct].quantity+=1;
+  contador.innerHTML++;
+}
+//Aplicamos promos
+applyPromotionsCart();
+console.log('Cart:', cart);
 }
 
 // Exercise 8
 function removeFromCart(id) {
   // 1. Loop for to the array products to get the item to add to cart
+  
   // 2. Add found product to the cartList array
 }
 
