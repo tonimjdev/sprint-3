@@ -4,7 +4,7 @@
 var products = [
   {
     id: 1,
-    name: "cooking oil",
+    name: "Cooking oil",
     price: 10.5,
     type: "grocery",
     offer: {
@@ -78,7 +78,7 @@ var total = 0;
 function buy(id) {
   // 1. Loop for to the array products to get the item to add to cart
   // 2. Add found product to the cartList array
-
+  
   for (let i = 0; i < products.length; i++) {
     console.log("pos array=", i);
     if (products[i].id == id) {
@@ -100,10 +100,11 @@ function cleanCart() {
 function calculateTotal() {
   // Calculate total price of the cart using the "cartList" array
   total = 0;
-  for (let i = 0; i < cartList.length; i++) {
-    total += cartList[i].price;
+  for (let i = 0; i < cart.length; i++) {
+    total += cart[i].subtotalWithDiscount;
     console.log("Total=", total.toFixed(2));
-  } return total;
+  }
+  return total;
 }
 
 // Exercise 4
@@ -131,26 +132,43 @@ function applyPromotionsCart() {
     console.log("Subtotal: ", cart[i].subtotal.toFixed(2));
     console.log("Offer: ", cart[i].offer);
     // Promotion discount
-    if (cart[i].offer!==undefined) {// Si offer no es undefined es que tiene alguna promoción
-      if (cart[i].quantity >= cart[i].offer.number) { // Condición para aplicar la oferta
-      console.log ('Este producto tiene descuento!!');
-      cart[i].subtotalWithDiscount = cart[i].subtotal - cart[i].subtotal * (cart[i].offer.percent / 100);
-      console.log("Subtotal discount ", cart[i].subtotalWithDiscount.toFixed(2));
+    if (cart[i].offer !== undefined) {
+      // Si offer no es undefined es que tiene alguna promoción
+      if (cart[i].quantity >= cart[i].offer.number) {
+        // Condición para aplicar la oferta
+        console.log("Este producto tiene descuento!!");
+        cart[i].subtotalWithDiscount = cart[i].subtotal - cart[i].subtotal * (cart[i].offer.percent / 100);
+        console.log("Subtotal discount ", cart[i].subtotalWithDiscount.toFixed(2));
+      } else {
+        cart[i].subtotalWithDiscount = cart[i].subtotal;
+        console.log("No hay suficientes unidades para aplicar el descuento");
       }
-      else console.log ('No hay suficientes unidades para aplicar el descuento');
+    } else {
+      cart[i].subtotalWithDiscount = cart[i].subtotal;
+      console.log("Este producto NO tiene descuento");
     }
-    else console.log ('Este producto NO tiene descuento');
   }
 }
 
 // Exercise 6
 function printCart() {
   // Fill the shopping cart modal manipulating the shopping cart dom
+  generateCart();
+  applyPromotionsCart();
   let cartModal = document.querySelector("#cart_list");
   cartModal.innerHTML = "";
+  for (let i = 0; i < cart.length; i++) { // Recorremos el array cart i mostramos los productos en el carrito
+    document.getElementById("cart_list").innerHTML += `<tr><th>${cart[i].name}</th>
+    <td>${cart[i].price}</td>
+    <td>${cart[i].quantity}</td>
+    <td>${cart[i].subtotalWithDiscount.toFixed(2)}</td>
+    </tr>
+    `;
+  }
+  // Total Carrito
   let cartTotal = calculateTotal();
-  console.log ('cartTotal: ', cartTotal);
-  document.getElementById('total_price').innerHTML = cartTotal;
+  console.log("cartTotal: ", cartTotal);
+  document.getElementById("total_price").innerHTML = cartTotal.toFixed(2);
 }
 
 // ** Nivell II **
