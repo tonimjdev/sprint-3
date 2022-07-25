@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>ShopNow</title>
+    <title>ShopNow - by Toni Machado (Angular Sprint 3)</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <link
@@ -14,7 +14,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/custom.css"/>
     <!-- Bootstrap icons-->
     <link
       rel="stylesheet"
@@ -27,7 +28,7 @@
 
   <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="50">
     <!-- Navigation-->
-    <nav class="navbar py-3 py-lg-0 navbar-light bg-light navbar-expand-lg" id="navbar-example2">
+    <nav class="navbar py-3 py-lg-0 navbar-light navbar-expand-lg" id="navbar-example2">
       <div class="container d-flex">
         <a class="navbar-brand" href="#!">ShopNow</a>
         <div class="d-flex flex-row order-lg-last align-items-center">
@@ -76,11 +77,11 @@
     </nav>
 
     <!-- Header-->
-    <header class="bg-dark py-5">
+    <header class="py-5 header">
       <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-white">
+        <div class="text-center text-secondary">
           <h1 class="display-4 fw-bolder">IT Academy Shop</h1>
-          <p class="lead fw-normal text-white-50 mb-0">Get up to 50% off Today Only!</p>
+          <p class="lead fw-normal text-black-50 mb-0">Get up to 50% off Today Only!</p>
         </div>
       </div>
     </header>
@@ -91,7 +92,7 @@
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
           <div class="col mb-5">
             <div class="card h-100">
-              <img class="card-img-top" src="./images/product.svg" alt="..." />
+              <img class="card-img-top" src="./images/oil_product.jpg" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Cooking Oil</h5>
@@ -253,10 +254,10 @@
 
     <!-- Footer-->
     <footer class="py-3 bg-dark">
-      <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+      <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Toni Machado 2022</p></div>
     </footer>
 
-	<!-- Modal Cart -->
+    <!-- Modal Cart -->
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">

@@ -1,0 +1,33 @@
+/* Styles per Sprint 3 (Angular) Alumne: Toni Machado */
+/* Variables colors */
+
+:root {
+    /*Cartcolor1*/
+    --richBlack: #07090F;
+    --metallicSun: #A37C40;
+    --chestnut: #98473E;
+    --beaver: #B49082;
+    --queenPink: #D6C3C9;
+    /*Cartcolor2*/
+    --deepTaupe: #7C616C;
+    --pinkLavender: #D1B1CB;
+    --languidLavender: #DDCAD9;
+    --platinum: #E5E9EC;
+    --azure: #EAFDF8;
+}
+
+
+#navbar-example2 {
+    background-color: var(--deepTaupe)
+
+}
+
+#navbar-example2 a{
+    color: #fff;
+
+}
+
+.header {
+    background-color: var(--languidLavender);
+    
+}
