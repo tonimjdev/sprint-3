@@ -23,14 +23,17 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
     <!-- Core theme CSS (includes Bootstrap)-->
   </head>
 
   <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="50">
     <!-- Navigation-->
-    <nav class="navbar py-3 py-lg-0 navbar-light navbar-expand-lg" id="navbar-example2">
-      <div class="container d-flex">
-        <a class="navbar-brand" href="#!">ShopNow</a>
+    <nav class="fixed-top navbar py-3 py-lg-0 navbar-light navbar-expand-lg" id="navbar-example2">
+      <div class="container d-flex gap-4">
+        <a class="navbar-brand" href="#!">My Little Shop</a>
         <div class="d-flex flex-row order-lg-last align-items-center">
           <button
             type="button"
@@ -54,22 +57,22 @@
                 data-bs-auto-close="outside"
               >
                 <i class="fas fa-shopping-cart me-1"></i> Cart
-                <span class="badge bg-dark text-white ms-1 rounded-pill" id="count_product">0</span>
+                <span class="badge text-white ms-1 rounded-pill" id="count_product">0</span>
               </a>
             </li>
           </ul>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="navbar-nav me-auto mb-4 mb-lg-0 ms-lg-5">
+          <ul class="navbar-nav me-auto mb-4 mb-lg-0 ms-lg-5 gap-lg-5">
             <li class="nav-item">
-              <a class="nav-link" href="#grocery"><i class="fas fa-shopping-basket"></i> Grocery</a>
+              <a class="nav-link" href="#grocery">Grocery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#beauty"><i class="fas fa-heart"></i> Beauty</a>
+              <a class="nav-link" href="#beauty">Beauty</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#clothes"><i class="fas fa-tshirt"></i> Clothes</a>
+              <a class="nav-link" href="#clothes"> Clothes</a>
             </li>
           </ul>
         </div>
@@ -79,20 +82,20 @@
     <!-- Header-->
     <header class="py-5 header">
       <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-secondary">
-          <h1 class="display-4 fw-bolder">IT Academy Shop</h1>
-          <p class="lead fw-normal text-black-50 mb-0">Get up to 50% off Today Only!</p>
+        <div class="text-center">
+          <h1 class="display-4 fw-bolder pt-4">My Little Shop</h1>
+          <p class="lead mb-0 mt-3">Get up to 50% off Today Only!</p>
         </div>
       </div>
     </header>
     <!-- Section-->
     <section class="pt-5" id="grocery">
-      <h2 class="text-center"><i class="fas fa-shopping-basket pe-3"></i>Grocery</h2>
+      <h2 class="text-center">Grocery</h2>
       <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
           <div class="col mb-5">
-            <div class="card h-100">
-              <img class="card-img-top" src="./images/oil_product.jpg" alt="..." />
+            <div class="card h-100 shadow">
+              <img class="card-img-top" src="./images/oil_product.jpg" alt="oil product" />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Cooking Oil</h5>
@@ -107,8 +110,8 @@
             </div>
           </div>
           <div class="col mb-5">
-            <div class="card h-100">
-              <img class="card-img-top" src="./images/product.svg" alt="..." />
+            <div class="card h-100 shadow">
+              <img class="card-img-top" src="./images/pasta_product.jpg" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Pasta</h5>
@@ -123,8 +126,8 @@
             </div>
           </div>
           <div class="col mb-5">
-            <div class="card h-100">
-              <img class="card-img-top" src="./images/product.svg" alt="..." />
+            <div class="card h-100 shadow">
+              <img class="card-img-top" src="./images/cupcake_product.jpg" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Instant cupcake mixture</h5>
@@ -142,12 +145,12 @@
       </div>
     </section>
     <section class="pt-5" id="beauty">
-      <h2 class="text-center"><i class="fas fa-heart pe-3"></i>Beauty</h2>
+      <h2 class="text-center">Beauty</h2>
       <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
           <div class="col mb-5">
-            <div class="card h-100">
-              <img class="card-img-top" src="./images/product.svg" alt="..." />
+            <div class="card h-100 shadow">
+              <img class="card-img-top" src="./images/allinone_product.jpg" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">All-in-1</h5>
@@ -162,8 +165,8 @@
             </div>
           </div>
           <div class="col mb-5">
-            <div class="card h-100">
-              <img class="card-img-top" src="./images/product.svg" alt="..." />
+            <div class="card h-100 shadow">
+              <img class="card-img-top" src="./images/zeromakeupkit_product.jpg" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Zero makeup kit</h5>
@@ -178,8 +181,8 @@
             </div>
           </div>
           <div class="col mb-5">
-            <div class="card h-100">
-              <img class="card-img-top" src="./images/product.svg" alt="..." />
+            <div class="card h-100 shadow">
+              <img class="card-img-top" src="./images/liptints_product.jpg" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Lip tints</h5>
@@ -197,12 +200,12 @@
       </div>
     </section>
     <section class="pt-5" id="clothes">
-      <h2 class="text-center"><i class="fas fa-tshirt pe-3"></i>Clothes</h2>
+      <h2 class="text-center">Clothes</h2>
       <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
           <div class="col mb-5">
-            <div class="card h-100">
-              <img class="card-img-top" src="./images/product.svg" alt="..." />
+            <div class="card h-100 shadow">
+              <img class="card-img-top" src="./images/lawndress_product.png" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Lawn dress</h5>
@@ -217,8 +220,8 @@
             </div>
           </div>
           <div class="col mb-5">
-            <div class="card h-100">
-              <img class="card-img-top" src="./images/product.svg" alt="..." />
+            <div class="card h-100 shadow">
+              <img class="card-img-top" src="./images/lawnchiffon_product.png" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Lawn-chiffon combo</h5>
@@ -233,8 +236,8 @@
             </div>
           </div>
           <div class="col mb-5">
-            <div class="card h-100">
-              <img class="card-img-top" src="./images/product.svg" alt="..." />
+            <div class="card h-100 shadow">
+              <img class="card-img-top" src="./images/toddlerfrock_product.png" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Toddler Frock</h5>
@@ -300,7 +303,7 @@
             <div class="text-center fs-3">Total: $<span id="total_price">100</span></div>
             <div class="text-center">
               <a href="checkout.html" class="btn btn-primary m-3">Checkout</a>
-              <a href="javascript:void(0)" onclick="cleanCart()" class="btn btn-primary m-3">Clean Cart</a>
+              <a href="javascript:void(0)" onclick="cleanCart()" class="btn btn-outline-secondary m-3">Clean Cart</a>
             </div>
           </div>
         </div>

@@ -11,14 +11,20 @@
     /*Cartcolor2*/
     --deepTaupe: #7C616C;
     --pinkLavender: #D1B1CB;
-    --languidLavender: #DDCAD9;
+    --languidLavender: #edd4e5;
     --platinum: #E5E9EC;
     --azure: #EAFDF8;
+    --titleshop: #d50e96;
+}
+body {
+    background-image: url(../images/wave-haikei.svg);
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.08em;
 }
 
-
 #navbar-example2 {
-    background-color: var(--deepTaupe)
+   background-color: var(--richBlack);
 
 }
 
@@ -26,8 +32,35 @@
     color: #fff;
 
 }
-
-.header {
-    background-color: var(--languidLavender);
+#count_product {
+    background-color: var(--titleshop);
+}
+header h1,
+.navbar-brand {
+    font-family: 'Kaushan Script', cursive;
+    color: var(--titleshop);
+    letter-spacing: 0;
     
+}
+.card-img-top {
+    height: 400px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit:cover;
+}
+.card {
+    border-radius: 15px;
+    border: none;
+}
+.lead {
+    color: rgb(220, 86, 108);
+}
+
+h2 {
+    font-family: 'Kaushan Script', cursive;
+    color: var(--titleshop);
+    font-size: 3em; 
+}
+.navbar-toggler {
+    filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(344deg) brightness(99%) contrast(104%);
 }
