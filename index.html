@@ -23,17 +23,17 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
-    <!-- Core theme CSS (includes Bootstrap)-->
   </head>
 
   <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="50">
     <!-- Navigation-->
     <nav class="fixed-top navbar py-3 py-lg-0 navbar-light navbar-expand-lg" id="navbar-example2">
       <div class="container d-flex gap-4">
-        <a class="navbar-brand" href="#!">My Little Shop</a>
+        <a class="navbar-brand" href="./index.html">My Little Shop</a>
         <div class="d-flex flex-row order-lg-last align-items-center">
           <button
             type="button"
@@ -88,17 +88,20 @@
         </div>
       </div>
     </header>
-    <!-- Section-->
+    
+    <!-- Section 1 -->
     <section class="pt-5" id="grocery">
       <h2 class="text-center">Grocery</h2>
       <div class="container px-4 px-lg-5 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-lg-4 justify-content-center">
+
+          <!-- Product 1 -->
           <div class="col mb-5">
             <div class="card h-100 shadow">
               <img class="card-img-top" src="./images/oil_product.jpg" alt="oil product" />
               <div class="card-body p-4">
                 <div class="text-center">
-                  <h5 class="fw-bolder">Cooking Oil</h5>
+                  <h5 class="fw-bolder">Cooking Oil <span class="offerIcon"><img src="./images/offer.svg" alt="offer icon"></span></h5>
                   $10.5
                 </div>
               </div>
@@ -109,12 +112,13 @@
               </div>
             </div>
           </div>
+          <!-- Product 2 -->
           <div class="col mb-5">
             <div class="card h-100 shadow">
               <img class="card-img-top" src="./images/pasta_product.jpg" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
-                  <h5 class="fw-bolder">Pasta</h5>
+                  <h5 class="fw-bolder mt-2">Pasta</h5>
                   $6.25
                 </div>
               </div>
@@ -125,12 +129,13 @@
               </div>
             </div>
           </div>
+          <!-- Product 3 -->
           <div class="col mb-5">
             <div class="card h-100 shadow">
               <img class="card-img-top" src="./images/cupcake_product.jpg" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
-                  <h5 class="fw-bolder">Instant cupcake mixture</h5>
+                  <h5 class="fw-bolder">Instant cupcake mixture <span class="offerIcon"><img src="./images/offer.svg" alt="offer icon"></span></h5>
                   $5
                 </div>
               </div>
@@ -141,13 +146,17 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
+    <!-- Section 2 -->
     <section class="pt-5" id="beauty">
       <h2 class="text-center">Beauty</h2>
       <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+          <!-- Product 4 -->
           <div class="col mb-5">
             <div class="card h-100 shadow">
               <img class="card-img-top" src="./images/allinone_product.jpg" alt="..." />
@@ -164,6 +173,7 @@
               </div>
             </div>
           </div>
+          <!-- Product 5 -->
           <div class="col mb-5">
             <div class="card h-100 shadow">
               <img class="card-img-top" src="./images/zeromakeupkit_product.jpg" alt="..." />
@@ -180,9 +190,10 @@
               </div>
             </div>
           </div>
+          <!-- Product 6 -->
           <div class="col mb-5">
             <div class="card h-100 shadow">
-              <img class="card-img-top" src="./images/liptints_product.jpg" alt="..." />
+              <img class="card-img-top" src="./images/liptints_product2.jpg" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Lip tints</h5>
@@ -196,13 +207,18 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
+
+      <!-- Section 3 --> 
     </section>
     <section class="pt-5" id="clothes">
       <h2 class="text-center">Clothes</h2>
       <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+          <!-- Product 7 -->
           <div class="col mb-5">
             <div class="card h-100 shadow">
               <img class="card-img-top" src="./images/lawndress_product.png" alt="..." />
@@ -219,6 +235,7 @@
               </div>
             </div>
           </div>
+          <!-- Product 8 -->
           <div class="col mb-5">
             <div class="card h-100 shadow">
               <img class="card-img-top" src="./images/lawnchiffon_product.png" alt="..." />
@@ -235,9 +252,10 @@
               </div>
             </div>
           </div>
+          <!-- Product 9 -->
           <div class="col mb-5">
             <div class="card h-100 shadow">
-              <img class="card-img-top" src="./images/toddlerfrock_product.png" alt="..." />
+              <img class="card-img-top" src="./images/toddlerfrock_product2.jpg" alt="..." />
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">Toddler Frock</h5>
@@ -251,13 +269,14 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
     <!-- Footer-->
     <footer class="py-3 bg-dark">
-      <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Toni Machado 2022</p></div>
+      <div class="container"><p class="m-0 text-center text-white fw-light">Copyright &copy; Toni Machado 2022</p></div>
     </footer>
 
     <!-- Modal Cart -->
@@ -302,7 +321,7 @@
             </table>
             <div class="text-center fs-3">Total: $<span id="total_price">100</span></div>
             <div class="text-center">
-              <a href="checkout.html" class="btn btn-primary m-3">Checkout</a>
+              <a href="./checkout.html" onclick="saveCart()" class="btn btn-primary m-3">Checkout</a>
               <a href="javascript:void(0)" onclick="cleanCart()" class="btn btn-outline-secondary m-3">Clean Cart</a>
             </div>
           </div>

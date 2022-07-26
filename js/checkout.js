@@ -1,5 +1,7 @@
 // Script "Checkout" de l'Sprint 3 de l'itinerar Angular - Alumne: Toni Machado
 
+console.log('Cart:', cart)
+
 // Exercise 6
 function validate() {
   let error = 0;

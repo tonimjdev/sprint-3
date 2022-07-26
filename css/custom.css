@@ -2,19 +2,15 @@
 /* Variables colors */
 
 :root {
-    /*Cartcolor1*/
+    /*Cartcolor*/
     --richBlack: #07090F;
-    --metallicSun: #A37C40;
-    --chestnut: #98473E;
-    --beaver: #B49082;
-    --queenPink: #D6C3C9;
-    /*Cartcolor2*/
     --deepTaupe: #7C616C;
     --pinkLavender: #D1B1CB;
     --languidLavender: #edd4e5;
     --platinum: #E5E9EC;
     --azure: #EAFDF8;
-    --titleshop: #d50e96;
+    --titleShop: #d50e96;
+    --subtitleShop: rgb(220, 86, 108);
 }
 body {
     background-image: url(../images/wave-haikei.svg);
@@ -33,17 +29,17 @@ body {
 
 }
 #count_product {
-    background-color: var(--titleshop);
+    background-color: var(--titleShop);
 }
 header h1,
 .navbar-brand {
     font-family: 'Kaushan Script', cursive;
-    color: var(--titleshop);
+    color: var(--titleShop);
     letter-spacing: 0;
     
 }
 .card-img-top {
-    height: 400px;
+    height: 350px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     object-fit:cover;
@@ -53,14 +49,27 @@ header h1,
     border: none;
 }
 .lead {
-    color: rgb(220, 86, 108);
+    color: var(--subtitleShop);
 }
-
 h2 {
     font-family: 'Kaushan Script', cursive;
-    color: var(--titleshop);
+    color: var(--titleShop);
     font-size: 3em; 
 }
 .navbar-toggler {
     filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(344deg) brightness(99%) contrast(104%);
+}
+.formulario {
+    border-radius: 15px;
+    border: none; 
+}
+.check {
+    background-color: var(--languidLavender);
+    color: rgb(77, 77, 77);
+    border-radius: 10px;
+}
+@media(max-width:991px) {
+.navbar {
+    opacity: 95%;
+}
 }
