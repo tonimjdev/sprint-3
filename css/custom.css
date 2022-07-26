@@ -10,6 +10,7 @@
     --platinum: #E5E9EC;
     --azure: #EAFDF8;
     --titleShop: #d50e96;
+    --titleShopDark: #f006a6;
     --subtitleShop: rgb(220, 86, 108);
 }
 body {
@@ -72,4 +73,24 @@ h2 {
 .navbar {
     opacity: 95%;
 }
+}
+.modal-header {
+    background-color: var(--languidLavender);
+    font-family: 'Kaushan Script', cursive;
+    color: var(--titleShop);
+}
+.modal-content {
+    border-radius: 15px;
+}
+.modal-header {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.btn-pink {
+    background-color: var(--titleShop);
+    color: #fff;
+}
+.btn-pink:hover {
+    background-color: var(--titleShopDark);
+    color: #fff;
 }

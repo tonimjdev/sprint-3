@@ -67,9 +67,9 @@ var products = [
 ];
 
 // Array with products (objects) added directly with push(). Products in this array are repeated.
-let cartList = [];
+var cartList = [];
 // Improved version of cartList. Cart is an array of products (objects), but each one has a quantity field to define its quantity, so these products are not repeated.
-let cart = [];
+var cart = [];
 
 // Declaramos variables globales
 let total = 0;
@@ -157,13 +157,17 @@ function printCart() {
   cartModal.innerHTML = "";
   for (let i = 0; i < cart.length; i++) {
     // Recorremos el array cart i mostramos los productos en el carrito
+    // Añadimos iconos add/remove
     document.getElementById("cart_list").innerHTML += `<tr><th>${cart[i].name}</th>
     <td>${cart[i].price}</td>
     <td>${cart[i].quantity}</td>
     <td>${cart[i].subtotalWithDiscount.toFixed(2)}</td>
     <td><a href="javascript:void(0)" onclick="removeFromCart(${
       cart[i].id
-    })"><img src="../images/cart-dash-fill.svg" width="20px" alt="remove icon"/></a></td>
+    })"><img src="../images/dash-circle.svg" width="20px" alt="remove icon"/></a></td>
+    <td><a href="javascript:void(0)" onclick="addToCart(${
+      cart[i].id
+    })"><img src="../images/plus-circle.svg" width="20px" alt="add icon"/></a></td>
     </tr>
     `;
   }
@@ -197,6 +201,7 @@ function addToCart(id) {
   }
   //Aplicamos promos
   applyPromotionsCart();
+  printCart();
 }
 
 // Exercise 8

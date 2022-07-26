@@ -1,7 +1,4 @@
 // Script "Checkout" de l'Sprint 3 de l'itinerar Angular - Alumne: Toni Machado
-
-console.log('Cart:', cart)
-
 // Exercise 6
 function validate() {
   let error = 0;
@@ -32,6 +29,7 @@ function validate() {
     field.classList.remove("is-invalid");
     field.classList.add("is-valid");
   }
+  
   // Condicionales ternarios
   regExpName.test(fName.value) ? valid(fName) : invalid(fName);
   regExpEmail.test(fEmail.value) ? valid(fEmail) : invalid(fEmail);
@@ -46,16 +44,16 @@ function validate() {
   } else {
     alert("OK");
   }
+}
 
-  /* 
 	// CÓDIGO NO UTILIZADO
 	// Get the error elements
-	var errorName = document.getElementById("errorName");
+	/*var errorName = document.getElementById("errorName");
 	var errorEmail = document.getElementById("errorEmail");  
 	var errorAddress = document.getElementById("errorAddress");
 	var errorLastN = document.getElementById("errorLastN");
 	var errorPassword = document.getElementById("errorPassword");
-	var errorPhone = document.getElementById("errorPhone"); */
+	var errorPhone = document.getElementById("errorPhone");*/
 
   // Validate fields entered by the user: name, phone, password, and email
 
@@ -73,4 +71,3 @@ function validate() {
 		valid(fEmail);
 		console.log ('Email está bien');
 	}*/
-}
