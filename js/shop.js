@@ -164,10 +164,10 @@ function printCart() {
     <td>${cart[i].subtotalWithDiscount.toFixed(2)}</td>
     <td><a href="javascript:void(0)" onclick="removeFromCart(${
       cart[i].id
-    })"><img src="../images/dash-circle.svg" width="20px" alt="remove icon"/></a></td>
+    })"><img src="./images/dash-circle.svg" width="20px" alt="remove icon"/></a></td>
     <td><a href="javascript:void(0)" onclick="addToCart(${
       cart[i].id
-    })"><img src="../images/plus-circle.svg" width="20px" alt="add icon"/></a></td>
+    })"><img src="./images/plus-circle.svg" width="20px" alt="add icon"/></a></td>
     </tr>
     `;
   }
